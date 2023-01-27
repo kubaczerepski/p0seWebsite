@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Layout - P0se</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/contact.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <section id="logoBox">
+                <h1 id="logo">P0SE</h1>
+                <h5 id="subText">Modelling Agency</h5>
+            </section>
+            <p>Message Sent!</p>
+            <p>We will get in contact with you as soon as possible!</p>
+        </div>
+    </section>
+    <p id="copyright">Designed by Laura Haffke | Coded by Kuba Czerepski</p>
+    <header id="header">
+        <section id="logoBox">
+            <h1 id="logo">P0SE</h1>
+            <h5 id="subText">Modelling Agency</h5>
+        </section>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="https://www.behance.net/laurahaffke" target="_blank">Portfolio</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="imageSection">
+            <img src="../images/modelContact.jpg" alt="">
+        </section>
+        <section id="contactSection">
+            <h1>Join P0SE!</h1>
+            <input type="text" placeholder="Email Address" id="email" name="name" required>
+            <input type="text" placeholder="Subject" id="subject" name="name" required>
+            <input type="text" placeholder="Message" id="message" name="name" required>
+            <input type="text" placeholder="Sign" id="sign" name="name" required>
+            <Button id="submitButton">Send</Button>
+        </section>
+    </main>
+</body>
+<script src='../script.js'></script>
+</html>

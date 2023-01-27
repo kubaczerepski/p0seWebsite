@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    overflow-y: hidden;
+    #copyright{
+        position: absolute;
+        font-size: 10px;
+        left: 0;
+        top: 50%;
+        transform: rotate(-90deg);
+        animation: slide-top 3s;
+    }
+header{
+    position: relative;
+    height: 20%;
+    width: 80%;
+    margin-top: 20px !important;
+    margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+    animation: slide-top 3s;
+    #logoBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        #logo{
+            font-size: 35px;
+            text-decoration: line-through;
+        }
+        #subText{
+            font-size: 10px;
+        }
+    }
+        ul{
+            position: relative;
+            list-style: none;
+            li{
+                display: inline-flex;
+                padding: 2.5px;
+                margin: 0px 10px;
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    color: #2f3542;
+                }
+            }
+            li:nth-child(4){
+                background: black;
+                a{
+                    color:#fff;
+                    padding: 2.5px;
+                }
+            }
+            a:nth-child(1){
+                animation: slide-top 0.5s;
+            }
+            a:nth-child(2){
+                animation: slide-top 1.5s;
+            }
+            a:nth-child(3){
+                animation: slide-top 2.5s;
+            }
+            a:nth-child(4){
+                animation: slide-top 3.5s;
+            }
+            a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: #000;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+              }
+              a:hover::before {
+                transform: scaleX(1);
+              } 
+        }
+}
+
+main{
+    position: relative;
+    height: 70%;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    #imageSection{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        img{
+            width: 70%;
+            height: 100%;
+            animation: fadeIn 3s;
+        }
+    }
+    #contactSection{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 50%;
+        height: 100%;
+        input{       
+            margin: 10px;
+            padding: 30px;
+            border: 0;
+            width: 50%;
+            font-size: 1rem;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+        button{
+            padding: 15px 25px;
+            border: 1px solid black;
+            color: black;
+            background: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background: black;
+            color: #fff;
+            border: 1px solid #fff;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+#modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 1s;
+  }
+  
+  #modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+  
+  
+  .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: -10px;
+    margin-top: -10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slide-top {
+    from {
+      opacity: 0;
+      margin-top: -100%;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0%;
+    }
+}

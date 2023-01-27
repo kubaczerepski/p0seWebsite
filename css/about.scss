@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    overflow-y: hidden;
+    #copyright{
+        position: absolute;
+        font-size: 10px;
+        left: 0;
+        top: 50%;
+        transform: rotate(-90deg);
+        animation: slide-top 3s;
+    }
+header{
+    position: relative;
+    height: 20%;
+    width: 80%;
+    margin-top: 20px !important;
+    margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+    #logoBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        #logo{
+            font-size: 35px;
+            text-decoration: line-through;
+        }
+        #subText{
+            font-size: 10px;
+        }
+    }
+        ul{
+            list-style: none;
+            li{
+                display: inline-flex;
+                padding: 2.5px;
+                margin: 0px 10px;
+                a{
+                    position: relative;
+                    text-decoration: none;
+                    color: #2f3542;
+                }
+            }
+            li:nth-child(4){
+                background: black;
+                a{
+                    color:#fff;
+                    padding: 2.5px;
+                }
+            }
+            a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: #000;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+              }
+              a:hover::before {
+                transform: scaleX(1);
+              } 
+        }
+}
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    padding: 10px;
+    margin: auto auto;
+    #imageSection{
+        width: 50%;
+        height: 100%;
+        img{
+            width: 70%;
+            height: 100%;
+            border: 1px solid black;
+            padding: 5px;
+            animation: fadeIn 3s;
+        }
+    }
+    #aboutSection{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50% ;
+        height: 100% ;
+        padding: 20px ;
+        font-size: 18px ;
+        text-align: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        animation: fadeIn 4s;
+        h1{
+            padding-bottom: 10px;
+        }
+    }
+}
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slide-top {
+    from {
+      opacity: 0;
+      margin-top: -100%;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0%;
+    }
+}
